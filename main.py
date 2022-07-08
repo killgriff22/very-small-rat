@@ -1,3 +1,5 @@
+import os
+os.system("python3 -m pip install flask")
 from flask import Flask
 import flask
 app = Flask(__name__)
